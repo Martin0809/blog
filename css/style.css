@@ -1,10 +1,89 @@
-body {
-	width: 100%;
-	height: 100%;
+* {
 	margin: 0;
 	padding: 0;
 }
 
+body {
+	width: 100%;
+	height: 100%;
+}
+
+/* 导航栏 */
+.nav {
+	position: fixed;
+	width: 100%;
+  	background-color: rgba(255,255,255,.9);
+	box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  	z-index: 5;
+}
+
+.main-nav,
+.sub-nav {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.main-nav {
+  	text-align: center;
+}
+
+.main-nav li {
+  	position: relative;
+  	display: inline-block;
+  	list-style: none;
+  	text-decoration: none;
+  	font-size: 16px;
+  	font-weight: 400;
+}
+
+.main-nav li a {
+  	display: block;
+  	padding: 15px;
+  	text-decoration: none;
+ 	color: #415166;
+}
+
+.main-nav li a:hover,
+.main-nav .active a {
+  	color: #408CF3;
+}
+
+.active {
+  	margin-bottom: -1px;
+  	border-bottom: 1px solid #fff;
+}
+
+.main-nav .sub-nav {
+  	position: absolute;
+  	margin-top: 30px;
+ 	opacity: 0;
+  	text-align: left;
+  	width: 100px;
+  	background-color: rgba(255,255,255,.9);
+	box-shadow: 0 1px 4px rgba(0,0,0,.3);
+ 	pointer-events: none;
+  	z-index: 1000;
+  	transition: all .3s;
+}
+
+.main-nav .menu:hover .sub-nav {
+  	margin-top: 0;
+  	opacity: 1;
+  	pointer-events: auto;
+}
+
+.main-nav .sub-nav li a {
+  	width: 100px;
+  	padding: 10px 15px;
+ 	color: #333;
+}
+
+.main-nav .sub-nav li a:hover,
+.main-nav .sub-nav .active a {
+  	color: #2ECC71;
+}
+
+/* 第一个屏幕 */
 .first-screen {
 	position: absolute;
 	width: 100%;
@@ -14,6 +93,7 @@ body {
 	background-size: cover;
 }
 
+/* 第二个屏幕 */
 .second-screen {
 	position: absolute;
 	top: 100%;
