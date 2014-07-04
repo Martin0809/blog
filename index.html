@@ -33,16 +33,31 @@
 				</li>
 			</ul>
 		</nav>
-		<div class="first-screen">
+		<div id="first-screen">
 			<div class="title">
 			    <h1>Martin's blog</h1>
 				<p>There is a feeling called Martin</p>
 		    </div>
 		</div>
-		<div class="second-screen">
+		<div id="second-screen">
 			<div class="container">
 				ddfdfdfdf
 			</div>
 		</div>
+		<script>
+			window.onscroll = function() {
+				var t = document.documentElement.scrollTop || document.body.scrollTop;
+				var height = document.getElementById("first-screen").offsetHeight;
+				var nav = document.getElementsByTagName("nav")[0];
+				var top = parseInt(height) - 52;
+				if(t >= top) {
+					nav.style.backgroundColor = "rgba(255,255,255,.9)";
+					nav.style.boxShadow = "0 1px 4px rgba(0,0,0,.3)";
+				} else {
+					nav.style.backgroundColor = "transparent";
+					nav.style.boxShadow = "0 0 0 transparent";
+				}
+			};
+		</script>
 	</body>
 </html>
