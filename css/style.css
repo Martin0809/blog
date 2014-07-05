@@ -112,6 +112,40 @@ body {
 	position: absolute;
 	top: 100%;
 	width: 100%;
-	height: 800px;
   background: #fff;
+}
+
+/* HTML */
+.block {
+  padding: 60px 0;
+}
+
+.block-gray {
+  background-color: #eee;
+}
+
+.hr-white {
+  border-color: #fff;
+}
+
+.img {
+  position: relative;
+  height: 250px;
+}
+
+.block img {
+  position: absolute;
+  margin: 0 auto;
+}
+
+.my-btn {
+  color: #415166;
+  background-color: transparent;
+  border-color: #415166;
+}
+
+.my-btn:hover {
+  color: #fff;
+  background-color: #408CF3;
+  border-color: #408CF3;
 }
