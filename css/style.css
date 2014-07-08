@@ -90,11 +90,7 @@ body {
 
 /* 第一个屏幕的内容 */
 .title {
-  position: fixed;
-  width: 500px;
-  height: 200px;
-  top: 15%;
-  left: 5%;
+  margin-top: 150px;
   text-align: center;
   font-family: ralewaythin,'microsoft yahei';
 }
