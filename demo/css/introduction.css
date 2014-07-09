@@ -16,12 +16,10 @@ body {
 	margin: 0 auto;
 	width: 80%;
 	height: 80%;
-	text-align: center;
 	-webkit-transform-style: preserve-3d;
 }
 .past {
 	position: absolute;
-	
 	width: 100%;
 	height: 100%;
 	opacity: 0;
@@ -31,7 +29,6 @@ body {
 }
 .present {
 	position: absolute;
-	
 	width: 100%;
 	height: 100%;
 	opacity: 1;
@@ -41,13 +38,43 @@ body {
 }
 .future {
 	position: absolute;
-	
 	width: 100%;
 	height: 100%;
 	opacity: 0;
 	-webkit-transform: rotateY(90deg);
 	-webkit-transform-origin: 50% 50% -800px;
 	-webkit-animation: 1s;
+}
+section {
+	
+}
+section h1 {
+	margin: 0;
+	font-family: 'Cabin Sketch',arial,sans-serif;
+	text-shadow: 3px 3px 0 #ddd;
+	color: #193340;
+	font-size: 5em;
+	line-height: 1.5em;
+	text-align: center;
+}
+section p {
+	color: #333;
+	font-size: 2em;
+	text-align: center;
+}
+section strong {
+	color: #ddd;
+	font-weight: 400;
+	font-size: 1.2em;
+	padding: 0 5px;
+}
+section a {
+	text-decoration: none;
+	color: #ddd;
+}
+section a:hover {
+	text-decoration: none;
+	color: #428bca;
 }
 .foot {
 	position: fixed;
@@ -56,6 +83,7 @@ body {
 	width: 100%;
 	text-align: center;
 	background: rgba(255, 255, 255, .9);
+	color: #333;
 }
 @-webkit-keyframes presentMove {
 	0% {
