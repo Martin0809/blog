@@ -91,4 +91,9 @@ document.onkeydown = function(e) {
 			bottom.className = "content-center";
 		}
 	}
+	if(document.getElementsByClassName("present")[0].id == "box") {
+		document.getElementById("footer").innerHTML = '请使用“&uarr;”和“&darr;”控制';
+	} else {
+		document.getElementById("footer").innerHTML = '请使用“&larr;”和“&rarr;”控制';
+	}
 };

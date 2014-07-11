@@ -1,3 +1,7 @@
+html {
+	width: 100%;
+	overflow: hidden;
+}
 body {
 	font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, TW\-Kai, serif;
 	margin: 0;
@@ -106,7 +110,7 @@ body {
 	-webkit-animation: 1s;
 }
 section {
-	
+
 }
 section h1 {
 	margin: 0;
@@ -123,19 +127,19 @@ section p {
 	text-align: center;
 }
 section strong {
-	color: #ddd;
+	color: #eee;
 	font-weight: 400;
 	font-size: 1.2em;
 	padding: 0 5px;
 }
 section a {
 	text-decoration: none;
-	color: #ddd;
+	color: #bf4a40;
 	transition: all 1s;
 }
 section a:hover {
 	text-decoration: none;
-	color: red;
+	color: #eee;
 }
 .foot {
 	position: fixed;
