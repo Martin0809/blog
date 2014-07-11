@@ -161,13 +161,16 @@ body {
 
 .post-img {
   background: #23719F;
+  overflow: hidden;
 }
 
 .post-content {
   height: 90px;
   padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.post-content h3 {
-  margin: 0;
+.post-content a {
+  font-size: 19px;
 }

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "css3学习笔记（一）"
 date:   2014-04-02 14:59:25
 categories: jekyll update
 ---

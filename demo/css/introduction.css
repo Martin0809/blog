@@ -10,6 +10,12 @@ body {
 	height: 100%;
 	background: #23719F;
 }
+.img {
+	position: fixed;
+	top: 20px;
+	left: 50px;
+	z-index: 100;
+}
 .box {
 	position: absolute;
 	width: 100%;
