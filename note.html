@@ -3,11 +3,32 @@ layout: default
 title: note
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts row">
-    {% for post in site.posts %}
-      <li class="col-sm-3"><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="note">
+	<h1>Blog Posts</h1>
+	<div class="posts row">
+		{% for post in site.posts %}
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="post-box">
+					<div class="post-img">
+						<img src="">
+					</div>
+					<p>{{ post.date | date_to_string }}</p> 
+					<div class="post-content">
+						<h3>
+			      			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+						</h3>	      		
+					</div>
+		      	</div>
+			</div>
+	    {% endfor %}
+	</div>
+	<script>
+		var box = document.getElementsByClassName("post-box")[0];
+		var imgs = document.getElementsByClassName("post-img");
+		setInterval(function() {
+			for (var i = 0; i < imgs.length; i++) {
+				imgs[i].style.height = box.offsetWidth + "px";
+			};
+		},1000);
+	</script>
 </div>
