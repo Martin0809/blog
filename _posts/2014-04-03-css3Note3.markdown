@@ -1,0 +1,95 @@
+---
+layout: post
+title:  "css3学习笔记（三）"
+date:   2014-04-03
+category: css
+---
+
+css3学习笔记（三）
+=================
+@[css|用户界面|2D|3D]
+###7.css3用户界面
+
+css3多列：
+- `column-count`:规定元素应该被分隔的列数
+- `column-gap`:规定列之间的间隔
+- `column-rule`:设置所有`column-rule-*`属性的简易属性
+- `column-width`:规定列的宽度
+
+`rasize`属性：规定是否可由用户调整元素尺寸的大小
+
+    rasize:none|both|horizontal|vertical;
+    //none:用户无法调整元素的尺寸
+    //both:用户可调整元素的高度和宽度
+    //horizontal:用户可调整元素的宽度
+    //vertical:用户可调整元素的高度
+`box-sizing`属性：允许用户以特定的方式定义匹配某个区域的特定元素
+
+    box-sizing:content-box|border-box|inherit;
+    //content-box:宽度和高度分别应用到元素的内容框，在高度和宽度之外绘制元素的内边距和边框
+    //border-box:为元素设定的宽度和高度决定了元素的边框盒
+    //inherit:规定应从父元素继承box-sizing属性的值
+`outline`属性：是给元素周围绘制轮廓外边框
+
+    outline:[outline-color]||[outline-style]||[outline-width]||[outline-offset]|inherit
+    //outline-color:指定轮廓边框的颜色
+    //outline-style:指定轮廓边框的轮廓
+    //outline-width:指定轮廓边框的宽度
+    //outline-offset:指定轮廓边框偏移位置的数值
+###8.2D转换
+
+`transform`属性：向元素应用2D或3D转换
+- `translate(x,y)|translateX(n)|translateY(n)`:沿X，Y轴移动元素
+- `scale(x,y)|scaleX(n)|scaleY(n)`:改变元素的高度，宽度
+- `rotate(angle)`:在参数中规定旋转角度
+- `skew(x-angle,y-angle)|skewX(angle)|skewY(angle)`:沿X，Y轴倾斜元素
+
+`transform-origin`属性：允许改变被转换元素的位置
+
+###9.3D转换
+
+`transform`属性：
+- `translate3d(x,y,z)|translateX(n)|translateY(n)|translateZ(n)`:移动
+- `scale3d(x,y,z)|scaleX(n)|scaleY(n)|scaleY(n)`:缩放
+- `rotate3d(x,y,z,angle)|rotateX(angle)|rotateY(angle)|rotateZ(angle)`:旋转
+
+`transform-style`属性：规定被嵌套元素如何在3D空间中显示
+- `flat`：子元素将不保留其3D位置
+- `preserve-3d`:子元素将保留其3D位置
+
+`perspective`属性：规定3D元素的透视效果
+
+`perspective-origin`属性：规定3D元素的底部位置
+
+`backface-visibility`属性：定义元素在不面对屏幕时是否可见
+- `visible`:背面可见
+- `hidden`:背面不可见
+
+###10.css3过渡与倒影
+
+过渡：
+
+    transition:property duration timing-function delay;
+    //property:规定应用过渡的css属性的名称
+    //duration:定义过渡效果花费的时间
+    //timing-function:规定过渡效果的时间曲线
+    //delay:规定过渡效果何时开始
+
+倒影：
+
+    box-reflect:none|direction offset?mask-box-image;
+    
+###11.动画
+
+    @keyframes animationname{keyframes-selector{css-style;}}
+    //animationname:定义动画名称
+    //keyframes-selector:动画时长的百分比，0-100%，from(与0%相同)，同(与100%相同)
+    //css-style:一个或多个合法的css样式属性
+`animate`属性：
+
+    animation:name duration timing-function delay iteration-count direction;
+    //name:规定@keyframes动画的名称
+    //iteration-count:规定动画被播放的次数
+    //direction:规定动画是否在下一周期逆向播放
+    
+###更多教程请点击[这里](http://www.w3school.com.cn/css3/index.asp)

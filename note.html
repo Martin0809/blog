@@ -4,21 +4,26 @@ title: note
 ---
 
 <div class="note">
-	<h1>Blog Posts</h1>
+	<div class="note-header">
+		<h1>Blog Notes</h1>
+	</div>
 	<div class="posts row">
-		{% for post in site.posts %}
-			<div class="col-md-3 col-sm-4 col-xs-6">
-				<div class="post-box">
-					<div class="post-img">
-						<img src="{{ site.baseurl }}/images/html5.png">
-					</div>
-					<p>{{ post.date | date_to_string }}</p> 
-					<div class="post-content">
-			      		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-					</div>
-		      	</div>
-			</div>
+	    {% for post in site.posts %}
+		    <div class="time-line col-sm-9">
+		    	<div class="time col-sm-3 col-xs-3">
+		    		<p>{{ post.date | date_to_string }}</p>
+		    	</div>
+		    	<div class="time-content col-sm-9 col-xs-9">
+		    		<div class="circle"></div>
+		    		<div class="time-title">
+		    			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+		    		</div>
+		    	</div>
+		    </div>
 	    {% endfor %}
+	    <div class="col-sm-3">
+
+	    </div>
 	</div>
 	<script>
 		var box = document.getElementsByClassName("post-box")[0];

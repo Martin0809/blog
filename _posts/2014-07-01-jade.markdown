@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "css3学习笔记（一）"
-date:   2014-04-02 14:59:25
-categories: jekyll update
+title:  "jade模版的使用"
+date:   2014-07-01
+category: html
 ---
 
-martin
-======
+jade模板的使用
+==============
 @[jade]
 ###安装
 通过npm：

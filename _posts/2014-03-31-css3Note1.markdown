@@ -1,0 +1,108 @@
+---
+layout: post
+title:  "css3学习笔记（一）"
+date:   2014-03-31
+category: css
+---
+
+css3学习笔记（一）
+=================
+@[css|选择器|响应式布局]
+###1.css3新增选择器
+后代级别选择器：
+- `element element`:选择`<div>`元素内部的所有`<p>`元素，`div p`
+- `element>element`:选择父元素为`<div>`元素的所有`<p>`元素，`div>p`
+- `:only-child`:匹配属于父元素中唯一的`<p>`元素，`p:only-child`
+- `:nth-child(n)`:匹配父元素中的第2个`<p>`子元素（n可以是数字、关键词，`odd`和`even`是可用于匹配下标是奇数或偶数的子元素的关键词），`p:nth-child(2)`
+- `:nth-last-child(n)`:匹配父元素中的倒数第2个`<p>`子元素，`p:nth-last-child(2)`
+- `:first-child`:选择属于父元素的第一个子元素的每个`<p>`元素，`p:first-child`
+- `:last-child`:选择属于父元素的最后一个子元素的每个`<p>`元素，`p:last-child`
+- `:root`:选择文档的根元素，`:root`
+- `:empty`:选择没有子元素的每个`<p>`元素（包括文本节点），`p:empty`
+
+辈级别选择器：
+- `element+element`:选择紧接在`<div>`元素之后的所有`<p>`元素，`div+p`
+- `element1~element2`:选择前面有`<p>`元素的每个`<ul>`元素，`<p>~<ul>`
+- `:first-of-type`:匹配同级兄弟元素中的第一个`<p>`元素，`p:first-of-type`
+- `:last-of-type`:匹配同级兄弟元素中的最后一个`<p>`元素，`p:last-of-type`
+- `:only-of-type`:匹配属于同类型中只有唯一兄弟元素的`<p>`，`p:only-of-type`
+- `:nth-of-type(n)`:匹配同类型中的第n个同级兄弟元素`<p>`（n可以是数字、关键词，`odd`和`even`是可用于匹配下标是奇数或偶数的子元素的关键词）,`p:nth-of-type`
+- `:nth-last-of-type(n)`:匹配同类型中的倒数第n个同级兄弟元素`<p>`，`nth-last-of-type(n)`
+
+伪类选择器：
+- `:link`:选择所有未被访问的链接，`a:link`
+- `:visited`:选择所有已被访问的链接，`a:visited`
+- `:active`:选择活动链接，`a:active`
+- `:hover`:选择鼠标指针位于其上的连接，`a:hover`
+- `:focus`:选择获得焦点的`input`元素，`input:focus`
+- `:first-letter`:选择每个`<p>`元素的首字母，`p:first-letter`
+- `:first-line`:选择每个`<p>`元素的首行，`p:first-line`
+- `:before`:在每个`<p>`元素的内容之前插入内容，`p:before`
+- `:after`:在每个`<p>`元素的内容之后插入内容，`p:after`
+- `:target`:选择当前活动的`#news`元素，`#news:target`
+- `:root`:选择文档的根元素，`:root`
+
+属性选择器：
+- `[attribute]`:选择带有`target`属性的所有元素，`[target]`
+- `[attribute=value]`:选择`target="_blank"`的所有元素，`[target=_blank]`
+- `[attribute~=value]`:选择`title`属性包含单词`flower`的所有元素，`[title~=flower]`
+- `[attribute|=value]`:选择`lang`属性值以`en`开头的所有元素，`[lang|=en]`
+- `[attribute^=value]`:选择其`src`属性以`"http"`开头的每个`<a>`元素，`a[src^="http"]`
+- `[attribute$=value]`:选择其`src`属性以`".pdf"`结尾的每个`<a>`元素，`a[src$=".pdf"]`
+- `[attribute*=value]`:选择其`src`属性中包含`"abc"`子串的每个`<a>`元素，`a[src*="abc"]`
+
+UI伪类选择器：
+- `:enabled`:选择每个启用的`<input>`元素，`input:enabled`
+- `:disabled`:选择每个禁用的`<input>`元素，`input:disabled`
+- `:checked`:选择每个被选中的`<input>`元素，`input:checked`
+- `:not(selector)`:选择非`<p>`元素的每个元素，`:not(p)`
+- `::selection`:选择被用户选取的元素部分，`::selection`
+
+###2.响应式布局
+响应式布局是现在很流行的一个设计理念。一个网站能够兼容多个终端，而不是为每个终端做一个特定的版本。
+
+利用**CSS3-Media Query**实现响应式布局：
+
+1.在`link`中使用`@media`:
+
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:600px)" href="link.css"/>
+2.在样式表中内嵌`@media`:
+
+    @media screen and (max-width:600px){
+        selector{
+            attribute:value;
+        }
+    }
+媒体类型：
+
+- `all`:默认，适用于所有设备
+- `aural`:语音合成器
+- `braille`:盲文反馈装置
+- `handheld`:手持设备
+- `projection`:投影仪
+- `print`:打印预览模式，打印页
+- `screen`:计算机屏幕
+- `tty`:电传打字机以及类似的使用等宽字符网格的媒介
+- `tv`:电视类型设备
+
+可能的操作符：
+
+- `and`:逻辑与，连接设备名与选择条件
+- `not`:排除某种设备
+- `only`:限定某种设备类型
+- `,`:设备列表
+
+属性值：
+- `width`:定义输出设备中的页面可见区域宽度（单位一般为`px`）
+- `heigth`:定义输出设备中的页面可见区域高度（单位一般为`px`）
+- `device-width`:定义输出设备的屏幕可见宽度（单位一般为`px`）
+- `device-heigth`:定义输出设备的屏幕可见高度（单位一般为`px`）
+- `orientation`:定义`height`是否大于或等于`width`，`portrait`代表是，`landscape`代表否，即设备手持方向，`portrait`为横向，`landscape`为竖向
+- `aspect-ratio`:定义`width`与`height`的比率，即浏览器的长宽比
+- `device-aspect-ratio`:定义`device-width`与`device-heigth`的比率，即设备屏幕的长宽比
+- `color`:定义每一组输出设备的彩色原件个数，如果不是彩色设备，则值等于0
+- `color-index`:定义在输出设备的彩色查询表中的条目数，如果没有使用彩色设备，则值等于0
+- `monochrome`:定义在一个单色框架缓冲区中每像素包含的单色原件个数，如果不是单色设备，则值等于0
+- `resolution`:定义设别的分辨率，如96dpi，300dpi，118dpcm
+- `scan`:定义电视类设备的扫描工序，`progressive`逐行扫描，`interlace`隔行扫描
+- `grid`:用泪查询输出设备是否使用栅格或点阵，只有`1`和`0`才是有效值，`1`代表是，`0`代表否
