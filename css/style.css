@@ -255,12 +255,14 @@ body {
 
 .categories-bar span {
   padding: 7.5px;
+  color: #408CF3;
   background: transparent;
   transition: 1s;
 }
 
 .categories-bar:hover span,
-.categories-bar:focus span {
+.categories-bar:active span {
+  color: #415166;
   background: #408CF3;
 }
 
@@ -295,13 +297,13 @@ body {
   border-top: 0 solid #ccc;
 }
 
-.categories-bar a {
+.categories-bar .category {
   color: #415166;
   text-decoration: none;
   transition: 1s;
 }
 
-.categories-bar a:hover {
+.categories-bar .category:hover {
   color: #408CF3;
 }
 

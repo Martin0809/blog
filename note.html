@@ -6,11 +6,11 @@ title: note
 <div class="note">
 	<div class="note-header">
 		<div class="categories-bar">
-			<span class="glyphicon glyphicon-align-justify"></span>
+			<a href="javascript:void(0);"><span class="glyphicon glyphicon-align-justify"></span></a>
 			<ul>
 				{% for category in site.categories %}
     				<li>
-    					<a href="{{ site.baseurl }}/{{ category | first }}.html">{{ category | first }} ({{ category | last | size }})</a>
+    					<a class="category" href="{{ site.baseurl }}/{{ category | first }}.html">{{ category | first }} ({{ category | last | size }})</a>
     				</li>
     			{% endfor %}
 			</ul>
