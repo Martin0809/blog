@@ -155,15 +155,12 @@ body {
   border-bottom: 4px solid #ccc;
 }
 
-.time-line {
-
-}
-
 .time {
   height: 90px;
   margin: 25px 0;
-  padding: 15px 25px;
+  padding: 15px 25px 15px 0;
   text-align: right;
+  overflow: hidden;
 }
 
 .time p {
@@ -209,4 +206,42 @@ body {
 
 .time-title a {
   font-size: 19px;
+}
+
+/* categories */
+.solid-bar {
+  margin-top: 25px;
+  font-size: 19px;
+  color: #fff;
+  background: #408CF3;
+}
+
+.solid-bar p {
+  margin: 15px 0;
+}
+
+.solid-bar ul {
+  margin: 0 -15px;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+}
+
+.solid-bar li {
+  padding: 10px 15px;
+  border-top: 1px solid #ccc;
+}
+
+.solid-bar li:first-child {
+  border-top: 0 solid #ccc;
+}
+
+.solid-bar a {
+  color: #415166;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.solid-bar a:hover {
+  color: #408CF3;
 }

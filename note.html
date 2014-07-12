@@ -8,8 +8,8 @@ title: note
 		<h1>Blog Notes</h1>
 	</div>
 	<div class="posts row">
-	    {% for post in site.posts %}
-		    <div class="time-line col-sm-9">
+	    <div class="time-line col-sm-9">
+	    	{% for post in site.posts %}
 		    	<div class="time col-sm-3 col-xs-3">
 		    		<p>{{ post.date | date_to_string }}</p>
 		    	</div>
@@ -19,10 +19,19 @@ title: note
 		    			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 		    		</div>
 		    	</div>
-		    </div>
-	    {% endfor %}
+	    	{% endfor %}
+	    </div>
 	    <div class="col-sm-3">
-
+	    	<div class="solid-bar col-sm-12">
+	    		<p>categories</p>
+	    		<ul>
+	    			{% for category in site.categories %}
+	    				<li>
+	    					<a href="{{ site.baseurl }}/{{ category | first }}.html">{{ category | first }} ({{ category | last | size }})</a>
+	    				</li>
+	    			{% endfor %}
+	    		</ul>
+	    	</div>
 	    </div>
 	</div>
 	<script>
