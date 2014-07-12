@@ -5,6 +5,16 @@ title: note
 
 <div class="note">
 	<div class="note-header">
+		<div class="categories-bar">
+			<span class="glyphicon glyphicon-align-justify"></span>
+			<ul>
+				{% for category in site.categories %}
+    				<li>
+    					<a href="{{ site.baseurl }}/{{ category | first }}.html">{{ category | first }} ({{ category | last | size }})</a>
+    				</li>
+    			{% endfor %}
+			</ul>
+		</div>
 		<h1>Blog Notes</h1>
 	</div>
 	<div class="posts row">
@@ -21,7 +31,7 @@ title: note
 		    	</div>
 	    	{% endfor %}
 	    </div>
-	    <div class="col-sm-3">
+	    <div class="categories col-sm-3">
 	    	<div class="solid-bar col-sm-12">
 	    		<p>categories</p>
 	    		<ul>
@@ -34,13 +44,4 @@ title: note
 	    	</div>
 	    </div>
 	</div>
-	<script>
-		var box = document.getElementsByClassName("post-box")[0];
-		var imgs = document.getElementsByClassName("post-img");
-		setInterval(function() {
-			for (var i = 0; i < imgs.length; i++) {
-				imgs[i].style.height = box.offsetWidth + "px";
-			};
-		},1000);
-	</script>
 </div>

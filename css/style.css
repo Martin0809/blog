@@ -245,3 +245,80 @@ body {
 .solid-bar a:hover {
   color: #408CF3;
 }
+
+/* categories-bar */
+.categories-bar {
+  position: relative;
+  float: right;
+  font-size: 24px;
+}
+
+.categories-bar span {
+  padding: 7.5px;
+  background: transparent;
+  transition: 1s;
+}
+
+.categories-bar:hover span,
+.categories-bar:active span {
+  background: #408CF3;
+}
+
+.categories-bar ul {
+  position: absolute;
+  top: 39px;
+  left: -111px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+  transition: 1s;
+}
+
+.categories-bar:hover ul {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.categories-bar li {
+  width: 150px;
+  padding: 10px 15px;
+  border-top: 1px solid #ccc;
+  font-size: 19px;
+}
+
+.categories-bar li:first-child {
+  border-top: 0 solid #ccc;
+}
+
+.categories-bar a {
+  color: #415166;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.categories-bar a:hover {
+  color: #408CF3;
+}
+
+@media screen and (min-width: 768px) {
+  .categories {
+    display: block;
+  }
+  .categories-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .categories {
+    display: none;
+  }
+  .categories-bar {
+    display: block;
+  }
+}
