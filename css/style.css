@@ -260,7 +260,7 @@ body {
 }
 
 .categories-bar:hover span,
-.categories-bar:active span {
+.categories-bar:focus span {
   background: #408CF3;
 }
 
