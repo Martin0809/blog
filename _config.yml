@@ -3,3 +3,4 @@ name: Martin
 markdown: redcarpet
 pygments: true
 baseurl: /blog
+relative_permalinks: false

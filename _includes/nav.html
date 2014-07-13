@@ -1,10 +1,10 @@
 <nav class="nav">
 	<ul class="main-nav">
 		<li name="nav_home">
-			<a class="text-center" href="{{ site.baseurl }}/"> Home </a>
+			<a class="text-center {% if page.overview %}active{% endif %}" href="{{ site.baseurl }}/"> Home </a>
 		</li>
 		<li name="nav_note">
-			<a class="text-center" href="{{ site.baseurl }}/note.html"> Note </a>
+			<a class="text-center {% if page.url contains '/note' %}active{% endif %}" href="{{ site.baseurl }}/note.html"> Note </a>
 		</li>
 		<li class="menu" name="nav_introduction">
 			<a class="text-center" href="{{ site.baseurl }}/demo/introduction.html"> Introduction </a>

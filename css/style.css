@@ -43,13 +43,8 @@ body {
 }
 
 .main-nav li a:hover,
-.main-nav .active a {
+.main-nav .active {
   color: #408CF3;
-}
-
-.active {
-  margin-bottom: -1px;
-  border-bottom: 1px solid #fff;
 }
 
 .main-nav .sub-nav {

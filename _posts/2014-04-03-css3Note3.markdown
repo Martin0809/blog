@@ -2,6 +2,7 @@
 layout: post
 title:  "css3学习笔记（三）"
 date:   2014-04-03
+permalink: /note/css3Note3/
 category: css
 ---
 
